@@ -30,7 +30,7 @@ CREATE TABLE Empleado (
     sexEmp CHAR(1),
     fecNac DATE,
     fecAlt DATE,
-    salEmp DECIMAL(10, 2),
+    salEmp INT,
     codSuc VARCHAR(10),
     dirEmp VARCHAR(100),
     FOREIGN KEY (codSuc) REFERENCES Sucursal(codSuc)
@@ -84,7 +84,7 @@ CREATE TABLE Operacion (
     horaOpe TIME,
     tipOpe VARCHAR(20),
     DescripcOpe VARCHAR(100),
-    vlrOpe DECIMAL(10, 2),
+    vlrOpe INT,
     nroCta VARCHAR(20),
     PRIMARY KEY (codCaj, fechaOpe, horaOpe),
     FOREIGN KEY (codCaj) REFERENCES Cajero(codCaj),
